@@ -13,9 +13,9 @@ Clone this repository
         * the class should extend BaseHandler defined in ./G600Handlers/BaseHandler.ahk
         * each class should overwrite the handle{key} and handle{key}Modified methods, to define how each shortcut should be handled for the application
           * keys may only be modified via ctrl
-    2) update ./G600Handlers/configurable/handlerMapping.ahk to update eigher the handlerMap or the default handler
+    2) update ./G600Handlers/configurable/handlerMapping.ahk to update either the handlerMap or the default handler
 * Note: only files under ./G600Handlers/configurable should be edited 
 
 
 ## License
-This project is licensed under the MIT License - see the [LICENSE.md]() file for details
+This project is licensed under the MIT License - see the [LICENSE.md](https://github.com/albertpatterson/AutoHotKeyBindings/blob/master/LICENSE) file for details
