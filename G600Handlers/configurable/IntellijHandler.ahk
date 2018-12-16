@@ -5,7 +5,8 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 
 #Include, %A_ScriptDir%\G600Handlers\BaseHandler.ahk
 
-class VSCodeHandler extends BaseHandler {
+class IntellijHandler extends BaseHandler {
+  
   ; handle0(){
 
   ; }
@@ -23,7 +24,7 @@ class VSCodeHandler extends BaseHandler {
   ; }
 
   handle2(){
-    ; toggle line comment
+    ; line comment
     Send, ^/
   }
 
@@ -31,17 +32,19 @@ class VSCodeHandler extends BaseHandler {
 
   ; }
 
-  ; handle3(){
-
-  ; }
+  handle3(){
+    ; intent actions
+    Send, !{Enter}
+  }
 
   ; handle3Modified(){
 
   ; }
 
-  ; handle4(){
-
-  ; }
+  handle4(){
+    ; class members
+    Send, !7
+  }
 
   ; handle4Modified(){
 
@@ -56,44 +59,48 @@ class VSCodeHandler extends BaseHandler {
   ; }
 
   handle6(){
-    ; toggle zen mode
-    Send, ^kz
+    ; toggle windows 
+    Send, ^+{F12}
   }
 
   ; handle6Modified(){
 
   ; }
 
-  ; handle7(){
-
-  ; }
+  handle7(){
+    ; surround with
+    Send, ^!t
+  }
 
   ; handle7Modified(){
 
   ; }
 
-  ; handle8(){
+  handle8(){
+    ; next change
+    Send, ^!+{Down}
+    Return True
+  }
 
-  ; }
-
-  ; handle8Modified(){
-
-  ; }
+  handle8Modified(){
+    ; prev change
+    Send, ^!+{Up}
+    Return True
+  }
 
   handle9(){
-    ; show next error
-    Send, {F8}
+    ; next error
+    Send, {F2}
   }
 
   handle9Modified(){
-    ; show previous error
-    Send, +{F8}
+    ; prev error
+    Send, +{F2}
   }
 
-  handlePlus(){
-    ; rename
-    Send, +{F6}
-  }
+  ; handlePlus(){
+
+  ; }
 
   ; handlePlusModified(){
 

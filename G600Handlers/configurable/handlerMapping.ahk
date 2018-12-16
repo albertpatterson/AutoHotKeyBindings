@@ -5,7 +5,8 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 
 #Include, %A_ScriptDir%\G600Handlers\configurable\ChromeHandler.ahk
 #Include, %A_ScriptDir%\G600Handlers\configurable\VSCodeHandler.ahk
+#Include, %A_ScriptDir%\G600Handlers\configurable\IntellijHandler.ahk
 #Include, %A_ScriptDir%\G600Handlers\configurable\DefaultHandler.ahk
 
-handlerMap:={"Google Chrome$": New ChromeHandler, "Visual Studio Code$": New VSCodeHandler}
+handlerMap:={"Google Chrome$": New ChromeHandler, "Visual Studio Code$": New VSCodeHandler, "IntelliJ IDEA$": New IntellijHandler}
 defaultHandler:=New DefaultHandler
